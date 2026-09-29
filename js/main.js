@@ -442,7 +442,7 @@ function productCardHtml(product) {
         <div class="product-footer">
           <span class="product-price">${formatPrice(product.price)}</span>
         </div>
-        <button class="btn btn--block" data-action="add-cart">Add to Cart</button>
+        <button class="btn btn--primary btn--block" data-action="add-cart">Add to Cart</button>
       </div>
     </article>
   `;
