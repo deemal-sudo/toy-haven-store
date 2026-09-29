@@ -281,19 +281,17 @@ function renderFooter() {
         <h3>Explore</h3>
         <ul>
           <li><a href="products.html">New Arrivals</a></li>
-          <li><a href="products.html">Best Sellers</a></li>
           <li><a href="wishlist.html">Your Collection</a></li>
-          <li><a href="products.html">All Products</a></li>
+          <li><a href="cart.html">Your Cart</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h3>Support</h3>
         <ul>
-          <li><a href="support.html">Shipping &amp; Returns</a></li>
-          <li><a href="support.html">FAQs</a></li>
-          <li><a href="support.html">Contact Us</a></li>
+          <li><a href="support.html">Help Center</a></li>
           <li><a href="checkout.html">Checkout</a></li>
+          <li><a href="support.html">Track an Order</a></li>
         </ul>
       </div>
 
@@ -387,7 +385,7 @@ function initHomePage() {
           <a class="btn btn--primary" href="products.html?category=${encodeURIComponent(slide.category)}">${slide.cta}</a>
         </div>
         <div class="hero-slide-media">
-          <img src="${slide.image}" alt="${slide.title}" style="object-position:${slide.position || "center"}">
+          <img src="${slide.image}" alt="" style="object-position:${slide.position || "center"}">
         </div>
       </div>
       <div class="hero-dots" role="tablist" aria-label="Promotional banners">
@@ -431,7 +429,7 @@ function productCardHtml(product) {
   return `
     <article class="product-card" data-id="${product.id}" data-reveal>
       <div class="product-media" style="--cat-color:${meta.color || "var(--color-primary)"}">
-        <img class="product-media-img" src="${product.image}" alt="${product.name}" loading="lazy" style="object-position:${product.imagePosition || "center"}">
+        <img class="product-media-img" src="${product.image}" alt="" loading="lazy" style="object-position:${product.imagePosition || "center"}">
         <button class="wish-toggle${wished ? " wish-toggle--active" : ""}" data-action="toggle-wish" aria-label="Toggle wishlist">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="${wished ? "currentColor" : "none"}"><path d="M12 21s-7.5-4.6-10-9.1C.5 8.4 2.4 5 6 5c2 0 3.4 1 4 2.4C10.6 6 12 5 14 5c3.6 0 5.5 3.4 4 6.9C19.5 16.4 12 21 12 21z" stroke="currentColor" stroke-width="1.8"/></svg>
         </button>
@@ -606,7 +604,7 @@ function renderCartPage() {
               return `
               <tr data-id="${product.id}">
                 <td class="cart-product-cell">
-                  <img class="cart-thumb" style="--cat-color:${(TOY_HAVEN_CATEGORIES[product.category] || {}).color || "var(--color-primary)"}" src="${product.image}" alt="${product.name}" style="object-position:${product.imagePosition || "center"}">
+                  <img class="cart-thumb" style="--cat-color:${(TOY_HAVEN_CATEGORIES[product.category] || {}).color || "var(--color-primary)"}" src="${product.image}" alt="" style="object-position:${product.imagePosition || "center"}">
                   <span>
                     <strong>${product.name}</strong>
                     <small>${product.category}</small>
@@ -816,7 +814,7 @@ function initWishlistPage() {
             return `
             <article class="product-card wishlist-card" data-id="${id}" data-reveal>
               <div class="product-media" style="--cat-color:${meta.color || "var(--color-primary)"}">
-                <img class="product-media-img" src="${product.image}" alt="${product.name}" loading="lazy" style="object-position:${product.imagePosition || "center"}">
+                <img class="product-media-img" src="${product.image}" alt="" loading="lazy" style="object-position:${product.imagePosition || "center"}">
                 <button class="wish-toggle wish-toggle--active" data-action="remove-wish" aria-label="Remove from wishlist">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.1C.5 8.4 2.4 5 6 5c2 0 3.4 1 4 2.4C10.6 6 12 5 14 5c3.6 0 5.5 3.4 4 6.9C19.5 16.4 12 21 12 21z"/></svg>
                 </button>
