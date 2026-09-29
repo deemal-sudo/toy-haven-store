@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shop — Toy Haven</title>
-  <meta name="theme-color" content="#ff5a36">
+  <meta name="theme-color" content="#c9351e">
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +27,7 @@
 
           <div class="filter-group">
             <h3>Keyword Search</h3>
+            <label class="visually-hidden" for="filter-search">Search within listing</label>
             <input type="search" id="filter-search" placeholder="Search within listing...">
           </div>
 
@@ -41,7 +42,9 @@
           <div class="filter-group">
             <h3>Price Range</h3>
             <div class="price-range">
+              <label class="visually-hidden" for="filter-min">Minimum price</label>
               <input type="number" id="filter-min" placeholder="$ Min" min="0">
+              <label class="visually-hidden" for="filter-max">Maximum price</label>
               <input type="number" id="filter-max" placeholder="$ Max" min="0">
             </div>
           </div>
