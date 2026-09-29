@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support &amp; FAQs — Toy Haven</title>
+  <meta name="theme-color" content="#ff5a36">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="support">
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="container page-header">
+      <h1>Feedback &amp; Support</h1>
+      <p>Need help with an order, grading, or your wishlist? Send us a note.</p>
+    </div>
+
+    <div class="container section" style="padding-top:12px">
+      <div class="support-layout">
+        <div>
+          <p class="support-success" id="feedback-success" hidden>Thanks — your message has been received. We'll reply within one business day.</p>
+          <form id="feedback-form" novalidate>
+            <div class="field">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name">
+              <p class="form-error" id="name-field-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com">
+              <p class="form-error" id="email-field-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us what's going on..."></textarea>
+              <p class="form-error" id="message-field-error" hidden></p>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block">Submit Support Case</button>
+          </form>
+        </div>
+
+        <div>
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item faq-item--open">
+            <button class="faq-question">How do I track my order?</button>
+            <div class="faq-answer"><p>Once your order ships you'll get a confirmation email with a tracking link. You can also see order history in this browser under your account activity.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is your return policy?</button>
+            <div class="faq-answer"><p>Unopened items can be returned within 30 days of delivery. Contact support with your order number to start a return.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Do you ship internationally?</button>
+            <div class="faq-answer"><p>Yes — we ship to most countries. Delivery estimates and any customs fees are shown at checkout before you confirm.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How do I contact support?</button>
+            <div class="faq-answer"><p>Use the form on this page for the fastest response, or email support@toyhaven.example — we reply within one business day.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

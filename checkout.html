@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — Toy Haven</title>
+  <meta name="theme-color" content="#ff5a36">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="checkout">
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="container page-header">
+      <h1>Checkout</h1>
+      <p>Enter your details to complete the order.</p>
+    </div>
+
+    <div class="container section" style="padding-top:12px">
+      <div class="checkout-layout">
+        <form id="checkout-form" novalidate>
+          <div class="checkout-step">
+            <h2><span class="step-number">1</span> Your Information</h2>
+            <div class="field">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" name="fullName">
+              <p class="form-error" id="name-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com">
+              <p class="form-error" id="email-error" hidden></p>
+            </div>
+          </div>
+
+          <div class="checkout-step">
+            <h2><span class="step-number">2</span> Delivery Address</h2>
+            <div class="field">
+              <label for="address">Full billing and delivery address</label>
+              <textarea id="address" name="address" placeholder="Street, city, postal code, country"></textarea>
+              <p class="form-error" id="address-error" hidden></p>
+            </div>
+          </div>
+
+          <div class="checkout-step">
+            <h2><span class="step-number">3</span> Payment Method</h2>
+            <div class="payment-options">
+              <label class="payment-option">
+                <input type="radio" name="payment" value="card" checked> Card
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment" value="cod"> Cash on Delivery
+              </label>
+            </div>
+            <div class="field" id="card-fields">
+              <label for="cardNumber">Card Number</label>
+              <input type="text" id="cardNumber" name="cardNumber" placeholder="•••• •••• •••• ••••" inputmode="numeric">
+              <p class="form-error" id="cardNumber-error" hidden></p>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block">Place Order</button>
+        </form>
+
+        <aside class="summary-card" id="checkout-summary"></aside>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

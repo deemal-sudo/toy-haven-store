@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart — Toy Haven</title>
+  <meta name="theme-color" content="#ff5a36">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="cart">
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="container page-header">
+      <h1>Your Shopping Cart</h1>
+      <p>Review your picks before heading to checkout.</p>
+    </div>
+
+    <div class="container section" style="padding-top:12px">
+      <div class="cart-layout">
+        <div id="cart-lines"></div>
+
+        <aside class="summary-card">
+          <h2>Order Summary</h2>
+          <div class="summary-row"><span>Subtotal</span><span id="cart-subtotal">$0.00</span></div>
+          <div class="summary-row"><span>Shipping estimate</span><span id="cart-shipping">$0.00</span></div>
+          <div class="summary-row summary-row--total"><span>Total</span><span id="cart-total">$0.00</span></div>
+          <button class="btn btn--primary btn--block" id="cart-checkout-btn" type="button">Proceed to Checkout</button>
+          <button class="btn btn--outline btn--block" id="cart-clear-btn" style="margin-top:10px">Clear Cart</button>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

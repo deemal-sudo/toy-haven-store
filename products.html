@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — Toy Haven</title>
+  <meta name="theme-color" content="#ff5a36">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="shop">
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="container page-header">
+      <h1>Shop the Collection</h1>
+      <p>Filter by category, price, or search for something specific.</p>
+    </div>
+
+    <div class="container section" style="padding-top:12px">
+      <div class="shop-layout">
+        <aside class="filters-panel">
+          <h2>Filters <button class="clear-link" id="filter-clear">Clear all</button></h2>
+
+          <div class="filter-group">
+            <h3>Keyword Search</h3>
+            <input type="search" id="filter-search" placeholder="Search within listing...">
+          </div>
+
+          <div class="filter-group">
+            <h3>Category</h3>
+            <label class="filter-checkbox"><input type="checkbox" class="filter-category" value="Figurines"> Figurines</label>
+            <label class="filter-checkbox"><input type="checkbox" class="filter-category" value="Toys"> Toys</label>
+            <label class="filter-checkbox"><input type="checkbox" class="filter-category" value="Board Games"> Board Games</label>
+            <label class="filter-checkbox"><input type="checkbox" class="filter-category" value="Diecast Cars"> Diecast Cars</label>
+          </div>
+
+          <div class="filter-group">
+            <h3>Price Range</h3>
+            <div class="price-range">
+              <input type="number" id="filter-min" placeholder="$ Min" min="0">
+              <input type="number" id="filter-max" placeholder="$ Max" min="0">
+            </div>
+          </div>
+        </aside>
+
+        <div>
+          <div class="results-bar">
+            <strong id="results-count">0 products matched</strong>
+          </div>
+          <div class="product-grid" id="products-grid"></div>
+          <div class="pagination" id="pagination"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

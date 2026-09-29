@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wishlist — Toy Haven</title>
+  <meta name="theme-color" content="#ff5a36">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="wishlist">
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="container page-header">
+      <h1>Your Collection</h1>
+      <p>Track what you want, what you own, and what to skip.</p>
+    </div>
+
+    <div class="container section" style="padding-top:12px">
+      <div class="results-bar">
+        <div class="wishlist-tabs">
+          <button class="wishlist-tab wishlist-tab--active" data-filter="all">All Tracked (<span id="count-all">0</span>)</button>
+          <button class="wishlist-tab" data-filter="interested">Interested (<span id="count-interested">0</span>)</button>
+          <button class="wishlist-tab" data-filter="owned">Owned (<span id="count-owned">0</span>)</button>
+        </div>
+      </div>
+      <div class="product-grid" id="wishlist-grid"></div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
