@@ -133,7 +133,15 @@ main { display: block; }
 
 .btn--block { width: 100%; border-radius: var(--radius-sm); }
 
-.btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none !important; }
+.btn:disabled {
+  opacity: 1;
+  cursor: not-allowed;
+  transform: none !important;
+  background: #e4e2f0 !important;
+  color: #52546f !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
 
 /* --------------------------------------------------------------------
    Header
@@ -239,9 +247,9 @@ main { display: block; }
   top: -4px; right: -4px;
   background: var(--color-primary);
   color: #fff;
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  min-width: 18px; height: 18px;
+  min-width: 19px; height: 19px;
   border-radius: 999px;
   display: grid;
   place-items: center;
@@ -542,7 +550,7 @@ main { display: block; }
   font-weight: 600;
 }
 .page-btn--active { background: var(--color-primary); color: #fff; border-color: var(--color-primary); }
-.page-btn:disabled { opacity: 0.4; }
+.page-btn:disabled { opacity: 1; color: #585a78; border-color: var(--color-border); background: #f4f3f9; cursor: not-allowed; }
 
 /* --------------------------------------------------------------------
    Cart page
